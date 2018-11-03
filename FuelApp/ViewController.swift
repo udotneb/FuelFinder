@@ -21,7 +21,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         mapView.delegate = self
-        destinationLocation = CLLocation(latitude: 34.052235, longitude: -118.243683)
+        destinationLocation = CLLocation(latitude: 37.774929, longitude: -122.419418)
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
@@ -39,6 +39,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     func showRouteOnMap() {
         let request = MKDirectionsRequest()
+        //destinations: [CLLocation]
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation!.coordinate, addressDictionary: nil))
         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destinationLocation!.coordinate, addressDictionary: nil))
         request.requestsAlternateRoutes = true
@@ -50,6 +51,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             guard let unwrappedResponse = response else { return }
             
             if (unwrappedResponse.routes.count > 0) {
+                print(unwrappedResponse.routes.count)
                 self.mapView.add(unwrappedResponse.routes[0].polyline)
                 self.mapView.setVisibleMapRect(unwrappedResponse.routes[0].polyline.boundingMapRect, animated: true)
             }
@@ -58,14 +60,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     
     // MARK: DELEGATE METHODS
-    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
-        if overlay is MKPolyline {
-            var polylineRenderer = MKPolylineRenderer(overlay: overlay)
-            polylineRenderer.strokeColor = UIColor.blue
-            polylineRenderer.lineWidth = 5
-            return polylineRenderer
-        }
-        return nil
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor(red: 17.0/255.0, green: 147.0/255.0, blue: 255.0/255.0, alpha: 1)
+        renderer.lineWidth = 5.0
+        return renderer
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
