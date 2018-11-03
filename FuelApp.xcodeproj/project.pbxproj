@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5DBCB955218E1EA800B3ABB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBCB954218E1EA800B3ABB7 /* AppDelegate.swift */; };
+		5DBCB957218E1EA800B3ABB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBCB956218E1EA800B3ABB7 /* ViewController.swift */; };
+		5DBCB95A218E1EA800B3ABB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBCB958218E1EA800B3ABB7 /* Main.storyboard */; };
+		5DBCB95D218E1EA800B3ABB7 /* FuelApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5DBCB95B218E1EA800B3ABB7 /* FuelApp.xcdatamodeld */; };
+		5DBCB95F218E1EA900B3ABB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DBCB95E218E1EA900B3ABB7 /* Assets.xcassets */; };
+		5DBCB962218E1EA900B3ABB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBCB960218E1EA900B3ABB7 /* LaunchScreen.storyboard */; };
+		5DBCB96D218E1EA900B3ABB7 /* FuelAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBCB96C218E1EA900B3ABB7 /* FuelAppTests.swift */; };
+		5DBCB978218E1EA900B3ABB7 /* FuelAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBCB977218E1EA900B3ABB7 /* FuelAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5DBCB969218E1EA900B3ABB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DBCB949218E1EA800B3ABB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DBCB950218E1EA800B3ABB7;
+			remoteInfo = FuelApp;
+		};
+		5DBCB974218E1EA900B3ABB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DBCB949218E1EA800B3ABB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DBCB950218E1EA800B3ABB7;
+			remoteInfo = FuelApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5DBCB951218E1EA800B3ABB7 /* FuelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DBCB954218E1EA800B3ABB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5DBCB956218E1EA800B3ABB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5DBCB959218E1EA800B3ABB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DBCB95C218E1EA800B3ABB7 /* FuelApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FuelApp.xcdatamodel; sourceTree = "<group>"; };
+		5DBCB95E218E1EA900B3ABB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DBCB961218E1EA900B3ABB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DBCB963218E1EA900B3ABB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DBCB968218E1EA900B3ABB7 /* FuelAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuelAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DBCB96C218E1EA900B3ABB7 /* FuelAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelAppTests.swift; sourceTree = "<group>"; };
+		5DBCB96E218E1EA900B3ABB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DBCB973218E1EA900B3ABB7 /* FuelAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuelAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DBCB977218E1EA900B3ABB7 /* FuelAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelAppUITests.swift; sourceTree = "<group>"; };
+		5DBCB979218E1EA900B3ABB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DBCB94E218E1EA800B3ABB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DBCB965218E1EA900B3ABB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DBCB970218E1EA900B3ABB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DBCB948218E1EA800B3ABB7 = {
+			isa = PBXGroup;
+			children = (
+				5DBCB953218E1EA800B3ABB7 /* FuelApp */,
+				5DBCB96B218E1EA900B3ABB7 /* FuelAppTests */,
+				5DBCB976218E1EA900B3ABB7 /* FuelAppUITests */,
+				5DBCB952218E1EA800B3ABB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5DBCB952218E1EA800B3ABB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DBCB951218E1EA800B3ABB7 /* FuelApp.app */,
+				5DBCB968218E1EA900B3ABB7 /* FuelAppTests.xctest */,
+				5DBCB973218E1EA900B3ABB7 /* FuelAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DBCB953218E1EA800B3ABB7 /* FuelApp */ = {
+			isa = PBXGroup;
+			children = (
+				5DBCB954218E1EA800B3ABB7 /* AppDelegate.swift */,
+				5DBCB956218E1EA800B3ABB7 /* ViewController.swift */,
+				5DBCB958218E1EA800B3ABB7 /* Main.storyboard */,
+				5DBCB95E218E1EA900B3ABB7 /* Assets.xcassets */,
+				5DBCB960218E1EA900B3ABB7 /* LaunchScreen.storyboard */,
+				5DBCB963218E1EA900B3ABB7 /* Info.plist */,
+				5DBCB95B218E1EA800B3ABB7 /* FuelApp.xcdatamodeld */,
+			);
+			path = FuelApp;
+			sourceTree = "<group>";
+		};
+		5DBCB96B218E1EA900B3ABB7 /* FuelAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				5DBCB96C218E1EA900B3ABB7 /* FuelAppTests.swift */,
+				5DBCB96E218E1EA900B3ABB7 /* Info.plist */,
+			);
+			path = FuelAppTests;
+			sourceTree = "<group>";
+		};
+		5DBCB976218E1EA900B3ABB7 /* FuelAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5DBCB977218E1EA900B3ABB7 /* FuelAppUITests.swift */,
+				5DBCB979218E1EA900B3ABB7 /* Info.plist */,
+			);
+			path = FuelAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DBCB950218E1EA800B3ABB7 /* FuelApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DBCB97C218E1EA900B3ABB7 /* Build configuration list for PBXNativeTarget "FuelApp" */;
+			buildPhases = (
+				5DBCB94D218E1EA800B3ABB7 /* Sources */,
+				5DBCB94E218E1EA800B3ABB7 /* Frameworks */,
+				5DBCB94F218E1EA800B3ABB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FuelApp;
+			productName = FuelApp;
+			productReference = 5DBCB951218E1EA800B3ABB7 /* FuelApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5DBCB967218E1EA900B3ABB7 /* FuelAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DBCB97F218E1EA900B3ABB7 /* Build configuration list for PBXNativeTarget "FuelAppTests" */;
+			buildPhases = (
+				5DBCB964218E1EA900B3ABB7 /* Sources */,
+				5DBCB965218E1EA900B3ABB7 /* Frameworks */,
+				5DBCB966218E1EA900B3ABB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DBCB96A218E1EA900B3ABB7 /* PBXTargetDependency */,
+			);
+			name = FuelAppTests;
+			productName = FuelAppTests;
+			productReference = 5DBCB968218E1EA900B3ABB7 /* FuelAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5DBCB972218E1EA900B3ABB7 /* FuelAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DBCB982218E1EA900B3ABB7 /* Build configuration list for PBXNativeTarget "FuelAppUITests" */;
+			buildPhases = (
+				5DBCB96F218E1EA900B3ABB7 /* Sources */,
+				5DBCB970218E1EA900B3ABB7 /* Frameworks */,
+				5DBCB971218E1EA900B3ABB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DBCB975218E1EA900B3ABB7 /* PBXTargetDependency */,
+			);
+			name = FuelAppUITests;
+			productName = FuelAppUITests;
+			productReference = 5DBCB973218E1EA900B3ABB7 /* FuelAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DBCB949218E1EA800B3ABB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Benjamin Ulrich";
+				TargetAttributes = {
+					5DBCB950218E1EA800B3ABB7 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					5DBCB967218E1EA900B3ABB7 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 5DBCB950218E1EA800B3ABB7;
+					};
+					5DBCB972218E1EA900B3ABB7 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 5DBCB950218E1EA800B3ABB7;
+					};
+				};
+			};
+			buildConfigurationList = 5DBCB94C218E1EA800B3ABB7 /* Build configuration list for PBXProject "FuelApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DBCB948218E1EA800B3ABB7;
+			productRefGroup = 5DBCB952218E1EA800B3ABB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DBCB950218E1EA800B3ABB7 /* FuelApp */,
+				5DBCB967218E1EA900B3ABB7 /* FuelAppTests */,
+				5DBCB972218E1EA900B3ABB7 /* FuelAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DBCB94F218E1EA800B3ABB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DBCB962218E1EA900B3ABB7 /* LaunchScreen.storyboard in Resources */,
+				5DBCB95F218E1EA900B3ABB7 /* Assets.xcassets in Resources */,
+				5DBCB95A218E1EA800B3ABB7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DBCB966218E1EA900B3ABB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DBCB971218E1EA900B3ABB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DBCB94D218E1EA800B3ABB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DBCB95D218E1EA800B3ABB7 /* FuelApp.xcdatamodeld in Sources */,
+				5DBCB957218E1EA800B3ABB7 /* ViewController.swift in Sources */,
+				5DBCB955218E1EA800B3ABB7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DBCB964218E1EA900B3ABB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DBCB96D218E1EA900B3ABB7 /* FuelAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DBCB96F218E1EA900B3ABB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DBCB978218E1EA900B3ABB7 /* FuelAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DBCB96A218E1EA900B3ABB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DBCB950218E1EA800B3ABB7 /* FuelApp */;
+			targetProxy = 5DBCB969218E1EA900B3ABB7 /* PBXContainerItemProxy */;
+		};
+		5DBCB975218E1EA900B3ABB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DBCB950218E1EA800B3ABB7 /* FuelApp */;
+			targetProxy = 5DBCB974218E1EA900B3ABB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5DBCB958218E1EA800B3ABB7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DBCB959218E1EA800B3ABB7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5DBCB960218E1EA900B3ABB7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DBCB961218E1EA900B3ABB7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DBCB97A218E1EA900B3ABB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5DBCB97B218E1EA900B3ABB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DBCB97D218E1EA900B3ABB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FR3Q6K39GS;
+				INFOPLIST_FILE = FuelApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Doe-Developments.FuelApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DBCB97E218E1EA900B3ABB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FR3Q6K39GS;
+				INFOPLIST_FILE = FuelApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Doe-Developments.FuelApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5DBCB980218E1EA900B3ABB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FR3Q6K39GS;
+				INFOPLIST_FILE = FuelAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Doe-Developments.FuelAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FuelApp.app/FuelApp";
+			};
+			name = Debug;
+		};
+		5DBCB981218E1EA900B3ABB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FR3Q6K39GS;
+				INFOPLIST_FILE = FuelAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Doe-Developments.FuelAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FuelApp.app/FuelApp";
+			};
+			name = Release;
+		};
+		5DBCB983218E1EA900B3ABB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FR3Q6K39GS;
+				INFOPLIST_FILE = FuelAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Doe-Developments.FuelAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FuelApp;
+			};
+			name = Debug;
+		};
+		5DBCB984218E1EA900B3ABB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FR3Q6K39GS;
+				INFOPLIST_FILE = FuelAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Doe-Developments.FuelAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FuelApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DBCB94C218E1EA800B3ABB7 /* Build configuration list for PBXProject "FuelApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DBCB97A218E1EA900B3ABB7 /* Debug */,
+				5DBCB97B218E1EA900B3ABB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DBCB97C218E1EA900B3ABB7 /* Build configuration list for PBXNativeTarget "FuelApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DBCB97D218E1EA900B3ABB7 /* Debug */,
+				5DBCB97E218E1EA900B3ABB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DBCB97F218E1EA900B3ABB7 /* Build configuration list for PBXNativeTarget "FuelAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DBCB980218E1EA900B3ABB7 /* Debug */,
+				5DBCB981218E1EA900B3ABB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DBCB982218E1EA900B3ABB7 /* Build configuration list for PBXNativeTarget "FuelAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DBCB983218E1EA900B3ABB7 /* Debug */,
+				5DBCB984218E1EA900B3ABB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5DBCB95B218E1EA800B3ABB7 /* FuelApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5DBCB95C218E1EA800B3ABB7 /* FuelApp.xcdatamodel */,
+			);
+			currentVersion = 5DBCB95C218E1EA800B3ABB7 /* FuelApp.xcdatamodel */;
+			path = FuelApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5DBCB949218E1EA800B3ABB7 /* Project object */;
+}
