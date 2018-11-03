@@ -15,13 +15,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var mapView: MKMapView!
     private var locationManager: CLLocationManager!
     private var currentLocation: CLLocation?
-    private var destinationLocation: CLLocation?
+    private var destinationLocation: [CLLocation]?
     private var routeRecently = false
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         mapView.delegate = self
-        destinationLocation = CLLocation(latitude: 37.774929, longitude: -122.419418)
+        destinationLocation = [CLLocation(latitude: 37.774929, longitude: -122.419418), CLLocation(latitude: 38, longitude: -122.419418)]
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
@@ -37,24 +37,31 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     
-    func showRouteOnMap() {
-        let request = MKDirectionsRequest()
-        //destinations: [CLLocation]
-        request.source = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation!.coordinate, addressDictionary: nil))
-        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destinationLocation!.coordinate, addressDictionary: nil))
-        request.requestsAlternateRoutes = true
-        request.transportType = .automobile
-        
-        let directions = MKDirections(request: request)
-        
-        directions.calculate { [unowned self] response, error in
-            guard let unwrappedResponse = response else { return }
+    func showRouteOnMap(destinations: [CLLocation]) {
+        // INPUT: List of locations to drive to
+        var previous = currentLocation!.coordinate
+        for i in destinations {
+            let request = MKDirectionsRequest()
+            request.source = MKMapItem(placemark: MKPlacemark(coordinate: previous, addressDictionary: nil))
+            request.destination = MKMapItem(placemark: MKPlacemark(coordinate: i.coordinate, addressDictionary: nil))
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = i.coordinate
+            mapView.addAnnotation(annotation)
+            request.requestsAlternateRoutes = true
+            request.transportType = .automobile
             
-            if (unwrappedResponse.routes.count > 0) {
-                print(unwrappedResponse.routes.count)
-                self.mapView.add(unwrappedResponse.routes[0].polyline)
-                self.mapView.setVisibleMapRect(unwrappedResponse.routes[0].polyline.boundingMapRect, animated: true)
+            let directions = MKDirections(request: request)
+            
+            directions.calculate { [unowned self] response, error in
+                guard let unwrappedResponse = response else { return }
+                
+                if (unwrappedResponse.routes.count > 0) {
+                    print(unwrappedResponse.routes.count)
+                    self.mapView.add(unwrappedResponse.routes[0].polyline)
+                    self.mapView.setVisibleMapRect(unwrappedResponse.routes[0].polyline.boundingMapRect, animated: true)
+                }
             }
+            previous = i.coordinate
         }
     }
     
@@ -79,7 +86,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
         currentLocation = locations[locations.count - 1]
         if !routeRecently {
-            showRouteOnMap()
+            showRouteOnMap(destinations: destinationLocation!)
             routeRecently = true
         }
     }
