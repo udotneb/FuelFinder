@@ -16,11 +16,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     private var locationManager: CLLocationManager!
     private var currentLocation: CLLocation?
     private var destinationLocation: CLLocation?
-    
+    private var routeRecently = false
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         mapView.delegate = self
+        destinationLocation = CLLocation(latitude: 34.052235, longitude: -118.243683)
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
@@ -38,18 +39,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     func showRouteOnMap() {
         let request = MKDirectionsRequest()
-        request.source = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation?.coordinate, addressDictionary: nil))
-        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destinationLocation?.coordinate, addressDictionary: nil))
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation!.coordinate, addressDictionary: nil))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destinationLocation!.coordinate, addressDictionary: nil))
         request.requestsAlternateRoutes = true
-        request.transportType = .Automobile
+        request.transportType = .automobile
         
         let directions = MKDirections(request: request)
         
-        directions.calculateDirectionsWithCompletionHandler { [unowned self] response, error in
+        directions.calculate { [unowned self] response, error in
             guard let unwrappedResponse = response else { return }
             
             if (unwrappedResponse.routes.count > 0) {
-                self.mapView.addOverlay(unwrappedResponse.routes[0].polyline)
+                self.mapView.add(unwrappedResponse.routes[0].polyline)
                 self.mapView.setVisibleMapRect(unwrappedResponse.routes[0].polyline.boundingMapRect, animated: true)
             }
         }
@@ -60,7 +61,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
         if overlay is MKPolyline {
             var polylineRenderer = MKPolylineRenderer(overlay: overlay)
-            polylineRenderer.strokeColor = UIColor.blueColor()
+            polylineRenderer.strokeColor = UIColor.blue
             polylineRenderer.lineWidth = 5
             return polylineRenderer
         }
@@ -78,7 +79,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             }
         }
         currentLocation = locations[locations.count - 1]
-        showRouteOnMap()
+        if !routeRecently {
+            showRouteOnMap()
+            routeRecently = true
+        }
     }
 }
 
