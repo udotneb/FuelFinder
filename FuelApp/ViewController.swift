@@ -5,7 +5,7 @@ protocol HandleMapSearch: class {
     func dropPinZoomIn(_ placemark:MKPlacemark)
 }
 
-class ViewController: UIViewController, CLLocationManagerDelegate, HandleMapSearch, MKMapViewDelegate{
+class ViewController: UIViewController, CLLocationManagerDelegate, HandleMapSearch, MKMapViewDelegate {
     var selectedPin: MKPlacemark?
     var resultSearchController: UISearchController!
     let locationManager = CLLocationManager()
@@ -18,6 +18,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, HandleMapSear
     }
     
     override func viewDidLoad() {
+        /*
         super.viewDidLoad()
         self.mapView.showsUserLocation = true
         locationManager.delegate = self
@@ -36,7 +37,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, HandleMapSear
         resultSearchController.dimsBackgroundDuringPresentation = true
         definesPresentationContext = true
         locationSearchTable.mapView = mapView
-        locationSearchTable.handleMapSearchDelegate = self
+        locationSearchTable.handleMapSearchDelegate = self*/
     }
     
     func getDirections(){

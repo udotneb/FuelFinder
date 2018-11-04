@@ -17,24 +17,10 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Teo-2i-bXt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Teo-2i-bXt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6oY-li-szr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Teo-2i-bXt" secondAttribute="bottom" id="7Eu-WY-UtX"/>
-                            <constraint firstItem="Teo-2i-bXt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ygr-9V-TH5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Teo-2i-bXt" secondAttribute="trailing" id="gyb-Vy-vDc"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="G1a-xq-s5g"/>
-                    <connections>
-                        <outlet property="mapView" destination="Teo-2i-bXt" id="7jP-DU-jyE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
