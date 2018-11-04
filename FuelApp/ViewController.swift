@@ -5,10 +5,9 @@ protocol HandleMapSearch: class {
     func dropPinZoomIn(_ placemark:MKPlacemark)
 }
 
-class ViewController: UIViewController, CLLocationManagerDelegate, HandleMapSearch{
+class ViewController: UIViewController, CLLocationManagerDelegate, HandleMapSearch, MKMapViewDelegate{
     var selectedPin: MKPlacemark?
     var resultSearchController: UISearchController!
-    
     let locationManager = CLLocationManager()
     private var currentLocation: CLLocation?
     
@@ -20,7 +19,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, HandleMapSear
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.mapView.showsUserLocation = true
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
@@ -64,7 +63,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, HandleMapSear
             
             directions.calculate { [unowned self] response, error in
                 guard let unwrappedResponse = response else { return }
-                
+                print("in")
                 if (unwrappedResponse.routes.count > 0) {
                     self.mapView.add(unwrappedResponse.routes[0].polyline)
                     self.mapView.setVisibleMapRect(unwrappedResponse.routes[0].polyline.boundingMapRect, animated: true)
@@ -74,69 +73,35 @@ class ViewController: UIViewController, CLLocationManagerDelegate, HandleMapSear
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse {
-            locationManager.requestLocation()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("error:: \(error)")
-    }
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else { return }
-        let span = MKCoordinateSpanMake(0.05, 0.05)
-        let region = MKCoordinateRegion(center: location.coordinate, span: span)
-        mapView.setRegion(region, animated: true)
+        print(currentLocation?.coordinate.longitude)
+        print(currentLocation?.coordinate.latitude)
+        if currentLocation == nil {
+            // Zoom to user location
+            if let userLocation = locations.last {
+                let viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 2000, 2000)
+                mapView.setRegion(viewRegion, animated: false)
+            }
+        }
         currentLocation = locations[locations.count - 1]
     }
     
     func dropPinZoomIn(_ placemark: MKPlacemark){
-        // cache the pin
-        selectedPin = placemark
         // clear existing pins
-        mapView.removeAnnotations(mapView.annotations)
+        //mapView.removeAnnotations(mapView.annotations)
         var placemarkLat = placemark.coordinate.latitude
         var placemarkLon = placemark.coordinate.longitude
-        print("in")
         showRouteOnMap(destinations: [CLLocation(latitude: placemarkLat, longitude: placemarkLon)])
     }
-}
-
-
-
-extension ViewController : MKMapViewDelegate {
-    /*
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
-        
-        guard !(annotation is MKUserLocation) else { return nil }
-        
-        let reuseId = "pin"
-        guard let pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView else { return nil }
-        
-        pinView.pinTintColor = UIColor.orange
-        pinView.canShowCallout = true
-        let smallSquare = CGSize(width: 30, height: 30)
-        var button: UIButton?
-        button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
-        button?.setBackgroundImage(UIImage(named: "car"), for: UIControlState())
-        button?.addTarget(self, action: #selector(ViewController.getDirections), for: .touchUpInside)
-        pinView.leftCalloutAccessoryView = button
-        
-        return pinView
-    } */
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
+        print("render")
         renderer.strokeColor = UIColor(red: 17.0/255.0, green: 147.0/255.0, blue: 255.0/255.0, alpha: 1)
         renderer.lineWidth = 5.0
         return renderer
     }
 }
-
-
-
 
 
 
