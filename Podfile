@@ -6,8 +6,10 @@ target 'FuelApp' do
   use_frameworks!
 
   # Pods for FuelApp
-  pod 'GoogleMaps'
-  
+  pod 'Alamofire', '~> 4.7'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod ‘SmartDeviceLink’, ‘~> 6.0.2’
+
   target 'FuelAppTests' do
     inherit! :search_paths
     # Pods for testing

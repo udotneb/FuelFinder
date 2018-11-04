@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (4.7.2)
+  - BiSON (1.1.1)
+  - SmartDeviceLink (6.0.2):
+    - BiSON (~> 1.1.1)
+    - SmartDeviceLink/Default (= 6.0.2)
+  - SmartDeviceLink/Default (6.0.2):
+    - BiSON (~> 1.1.1)
+  - SwiftyJSON (4.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - SmartDeviceLink (~> 6.0.2)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - BiSON
+    - SmartDeviceLink
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  BiSON: 2663348e6c64bfbf9cc82e4b0b3f7eed2cb3eb6b
+  SmartDeviceLink: 84458b3af834b4ce808a8126761a374cd7861cf6
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+
+PODFILE CHECKSUM: 338cb583c8df7347ba92923348913d0cb1f33c0d
+
+COCOAPODS: 1.5.3
